@@ -83,8 +83,6 @@
   #include "pins_RAMPS_PLUS.h"        // ATmega1280, ATmega2560                     env:megaatmega1280 env:megaatmega2560
 #elif MB(RAMPS_PLUS_SF)
   #include "pins_RAMPS_PLUS.h"        // ATmega1280, ATmega2560                     env:megaatmega1280 env:megaatmega2560
-  
-  
 
 //
 // RAMPS Derivatives - ATmega1280, ATmega2560
@@ -169,10 +167,9 @@
 #elif MB(VORON)
   #include "pins_VORON.h"             // ATmega2560                                 env:megaatmega2560
 // djp edit add defs for PICA from Tindie code section
-  #elif MB(PICA)
-  #include "pins_PICA.h"    		  // ATmega2560
-
-//
+#elif MB(PICA)
+  #include "pins_PICA.h"             // ATmega2560                                 env:megaatmega2560
+  
 // Other ATmega1280, ATmega2560
 //
 

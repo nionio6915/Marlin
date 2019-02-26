@@ -89,7 +89,7 @@
 #define BOARD_FYSETC_F6_13      541   // Fysetc F6
 #define BOARD_DUPLICATOR_I3_PLUS 31   // Wanhao Duplicator i3 Plus
 #define BOARD_VORON             441   // VORON Design
-
+#define BOARD_PICA              184   // PICA RAMPS
 //
 // Other ATmega1280, ATmega2560
 //
