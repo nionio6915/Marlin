@@ -168,7 +168,7 @@
   #include "pins_DUPLICATOR_I3_PLUS.h" // ATmega2560                                 env:megaatmega2560
 #elif MB(VORON)
   #include "pins_VORON.h"             // ATmega2560                                 env:megaatmega2560
-// djp edit add defs for PICA
+// djp edit add defs for PICA from Tindie code section
   #elif MB(PICA)
   #include "pins_PICA.h"    		  // ATmega2560
 
