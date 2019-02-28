@@ -138,7 +138,7 @@
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-#define CUSTOM_MACHINE_NAME "EV2_PICA_c"
+#define CUSTOM_MACHINE_NAME "EV2_PICA_d"
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
@@ -430,8 +430,8 @@
 #define PID_MAX BANG_MAX // Limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
 #define PID_K1 0.95      // Smoothing factor within any PID loop
 #if ENABLED(PIDTEMP)
-  //#define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of PROGMEM)
-  //#define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
+  #define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of PROGMEM)
+  #define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
   //#define PID_DEBUG             // Sends debug data to the serial port.
   //#define PID_OPENLOOP 1        // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
   //#define SLOW_PWM_HEATERS      // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
@@ -443,9 +443,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // Ultimaker
-  #define DEFAULT_Kp 22.2
-  #define DEFAULT_Ki 1.08
-  #define DEFAULT_Kd 114
+  #define DEFAULT_Kp 11.21 // djp edit 22.2
+  #define DEFAULT_Ki 1.17 // djp edit 1.08
+  #define DEFAULT_Kd 26.87 // djp edit 11.21114
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -586,8 +586,8 @@
   //#define ENDSTOPPULLUP_ZMAX
   //#define ENDSTOPPULLUP_XMIN
   //#define ENDSTOPPULLUP_YMIN
-  //#define ENDSTOPPULLUP_ZMIN
-  //#define ENDSTOPPULLUP_ZMIN_PROBE
+  // #define ENDSTOPPULLUP_ZMIN
+  // #define ENDSTOPPULLUP_ZMIN_PROBE
 #endif
 
 // Enable pulldown for all endstops to prevent a floating state
@@ -691,7 +691,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 10, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 35, 50 } // djp edit increased from 300 300 15 25
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -699,7 +699,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 250, 1500 }
 
 
 /**
@@ -922,7 +922,7 @@
 #endif
 //#define PROBING_FANS_OFF          // Turn fans off when probing
 //#define PROBING_STEPPERS_OFF      // Turn steppers off (unless needed to hold position) when probing
-//#define DELAY_BEFORE_PROBING 200  // (ms) To prevent vibrations from triggering piezo sensors
+#define DELAY_BEFORE_PROBING 500  // (ms) To prevent vibrations from triggering piezo sensors
 
 // For Inverting Stepper Enable Pins (Active Low) use 0, Non Inverting (Active High) use 1
 // :{ 0:'Low', 1:'High' }
@@ -1269,7 +1269,7 @@
 
 // Homing speeds (mm/m)
 #define HOMING_FEEDRATE_XY (80*60)
-#define HOMING_FEEDRATE_Z  (8*60)
+#define HOMING_FEEDRATE_Z  (10*60)
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS

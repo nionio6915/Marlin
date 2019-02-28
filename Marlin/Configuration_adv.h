@@ -403,8 +403,8 @@
 // Homing hits each endstop, retracts by these distances, then does a slower bump.
 #define X_HOME_BUMP_MM 5
 #define Y_HOME_BUMP_MM 5
-#define Z_HOME_BUMP_MM 2
-#define HOMING_BUMP_DIVISOR { 2, 2, 4 }  // Re-Bump Speed Divisor (Divides the Homing Feedrate)
+#define Z_HOME_BUMP_MM 5 // djp edit to increase distance for piezo probe
+#define HOMING_BUMP_DIVISOR { 2, 2, 2 }  // djp edit 4 to 2 for Z Re-Bump Speed Divisor (Divides the Homing Feedrate)
 #define QUICK_HOME                     // If homing includes X and Y, do a diagonal move initially
 
 // When G28 is called, this option will make Y home before X
@@ -663,13 +663,13 @@
 #endif
 
 // Include a page of printer information in the LCD Main Menu
-#define LCD_INFO_MENU
+// #define LCD_INFO_MENU djp edit on-off
 
 // Scroll a longer status message into view
-#define STATUS_MESSAGE_SCROLLING
+// #define STATUS_MESSAGE_SCROLLING djp edit on-off
 
 // On the Info Screen, display XY with one decimal place when possible
-//#define LCD_DECIMAL_SMALL_XY
+//#define LCD_DECIMAL_SMALL_XY djp edit on-off
 
 // The timeout (in ms) to return to the status screen from sub-menus
 //#define LCD_TIMEOUT_TO_STATUS 15000
