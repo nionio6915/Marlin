@@ -1,4 +1,5 @@
 /**
+ * djp edit this one for 3 MSG_LEVEL_BED_NEXT_POINT leveling
  * Marlin 3D Printer Firmware
  * Copyright (C) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
@@ -50,13 +51,19 @@ void _lcd_goto_next_corner() {
       current_position[Y_AXIS] = Y_MIN_BED + LEVEL_CORNERS_INSET;
       break;
     case 1:
-      current_position[X_AXIS] = X_MAX_BED - LEVEL_CORNERS_INSET;
-      break;
-    case 2:
+//    current_position[X_AXIS] = X_MAX_BED - LEVEL_CORNERS_INSET;
       current_position[Y_AXIS] = Y_MAX_BED - LEVEL_CORNERS_INSET;
       break;
+    case 2:
+//      current_position[Y_AXIS] = Y_MAX_BED - LEVEL_CORNERS_INSET;
+      current_position[X_AXIS] = X_MAX_BED - LEVEL_CORNERS_INSET;
+      current_position[Y_AXIS] = Y_CENTER;
+
+      break;
     case 3:
+//      current_position[X_AXIS] = X_MIN_BED + LEVEL_CORNERS_INSET;
       current_position[X_AXIS] = X_MIN_BED + LEVEL_CORNERS_INSET;
+      current_position[Y_AXIS] = Y_MIN_BED + LEVEL_CORNERS_INSET;
       break;
     #if ENABLED(LEVEL_CENTER_TOO)
       case 4:

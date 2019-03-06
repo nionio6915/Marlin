@@ -3,7 +3,8 @@
 #endif
 
 // djp added from source
-/* note that these are the "pins" that correspond to the analog inputs on the arduino mega.  these are not the same as the physical pin numbers
+/* note that these are the "pins" that correspond to the analog inputs on the arduino mega.  
+/  these are not the same as the physical pin numbers
 AD0 = 54;   AD1 = 55;   AD2 = 56;   AD3 = 57;   
 AD4 = 58;   AD5 = 59;   AD6 = 60;   AD7 = 61;   
 AD8 = 62;   AD9 = 63;   AD10 = 64;  AD11 = 65;
@@ -104,6 +105,9 @@ AD12 = 66;  AD13 = 67;  AD14 = 68;  AD15 = 69;
 // Pin A10
 #define TEMP_2_PIN         11  
 // Pin A11
+#define TEMP_CHAMBER_PIN   11
+// Pin A11
+// djp edit add definition for temp chamber to trick Marlin to read bed temps 
 #define TEMP_3_PIN         12  
 // Pin AD12
 
